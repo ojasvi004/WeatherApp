@@ -1,16 +1,18 @@
+// Search.js
 import React, { useState } from "react";
 import styles from "./Search.module.css";
 
-function Search() {
-  const [city, setCity] = useState("");
+function Search({ onSearch }) {
+  const [searchCity, setSearchCity] = useState("");
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    setCity("");
+    onSearch(searchCity);
+    setSearchCity("");
   };
 
   const handleInputChange = (e) => {
-    setCity(e.target.value);
+    setSearchCity(e.target.value);
   };
 
   return (
@@ -21,7 +23,7 @@ function Search() {
           id="search"
           className="search"
           placeholder="City Name"
-          value={city}
+          value={searchCity}
           onChange={handleInputChange}
         />
         <label htmlFor="search"></label>

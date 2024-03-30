@@ -9,7 +9,7 @@
 input,
 .submitSearch {
   box-sizing: border-box;
-  text-align: left; /* Reset text-align */
+  text-align: left;
 }
 input {
   margin-top: 50px;
@@ -22,7 +22,11 @@ input::placeholder {
   padding-left: 20px;
   font-size: 25px;
 }
-
+input {
+  font-size: 25px;
+  padding-left: 20px;
+  text-transform: capitalize;
+}
 .submitSearch svg {
   width: 50px;
   height: 50px;
@@ -31,32 +35,30 @@ input::placeholder {
 }
 
 .submitSearch {
-    align-items: center;
-    background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
-    border: 0;
-    border-radius: 50%;
-    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
-    box-sizing: border-box;
-    color: #ffffff;
-    display: flex;
-    align-self: flex-start;
-    width: 50px;
-    height: 50px;
-  }
-  
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 50%;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+
+  width: 50px;
+  height: 50px;
+}
 
 .submitSearch:active,
 .submitSearch:hover {
   outline: 0;
 }
 
-.submitSearch span {
-    background-color: rgb(5, 6, 45);
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    transition: 300ms;
-  }
+/* .submitSearch span {
+  background-color: rgb(5, 6, 45);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
 .submitSearch:hover span {
   background: none;
-}
+} */
