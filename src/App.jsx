@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Search from "./components/Search.jsx";
+import Temperature from "./components/Temperature.jsx";
 
 const KEY = "362f6c6761f2e294f30ff388950234d8";
 const exclude = "daily";
@@ -26,7 +27,7 @@ const App = () => {
       {weatherData && (
         <div>
           <h2>{weatherData.name} temperature:</h2>
-          <p>{weatherData.main.temp}</p>
+          <Temperature currentTemp={weatherData.main.temp} />
         </div>
       )}
     </div>
