@@ -1,5 +1,7 @@
 // Search.js
-import React, { useState } from "react";
+import  { useState } from "react";
+
+/* eslint-disable react/prop-types */
 import styles from "./Search.module.css";
 
 function Search({ onSearch }) {

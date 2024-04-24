@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Search from "./components/Search.jsx";
 import Temperature from "./components/Temperature.jsx";
 import Weather from "./components/Weather.jsx";
@@ -22,12 +22,12 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Weather App</h1>
+    <div style={{ textAlign: "center", marginTop: "20px" }}>
+      <h1 style={{ marginBottom: "0.5px" }}>Weather</h1>
       <Search onSearch={fetchData} />
       {weatherData && (
-        <div>
-          <h2>{weatherData.name} temperature:</h2>
+        <div style={{ marginTop: "20px" }}>
+          <h2>{weatherData.name}</h2>
           <Temperature
             currentTemp={weatherData.main.temp}
             feelsLike={weatherData.main.feels_like}
